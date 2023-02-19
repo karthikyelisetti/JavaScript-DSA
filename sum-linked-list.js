@@ -5,10 +5,10 @@ class Node {
   }
 }
 
-// function newNode(value) {
-//   let temp = new Node(value);
-//   return temp;
-// }
+function newNode(value) {
+  let temp = new Node(value);
+  return temp;
+}
 
 class LinkedList {
   constructor(value) {
@@ -48,7 +48,6 @@ function reverseArray(arr, order) {
     }
   } else {
     for (var i = 0; i < arr.length; i++) {
-      console.log(arr[i]);
       revArr.push(arr[i]);
     }
   }
@@ -98,6 +97,14 @@ function addLinkedList(l1, l2, order) {
   console.log("The sum of two linked lists is: " + sum);
 }
 
+// list1 = new LinkedList(7);
+// list1.append(1).append(6);
+// console.log('List-1: '+ list1.print());
+
+// list2 = new LinkedList(2);
+// list2.append(9).append(5);
+// console.log('List-2: '+ list2.print());
+
 // Creating a linked list-1
 let list1 = newNode(6);
 list1.next = newNode(1);
@@ -108,4 +115,6 @@ let list2 = newNode(2);
 list2.next = newNode(9);
 list2.next.next = newNode(5);
 
+// reverse order pass the value reverse as 3rd parameter
+// forward order pass the value forward as 3rd parameter
 addLinkedList(list1, list2, "forward");
